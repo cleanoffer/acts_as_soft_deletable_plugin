@@ -5,11 +5,9 @@ class AddColumn < ActiveRecord::Migration
 
   def self.up
     add_column :things, :sku, :string
-    Thing::Deleted.update_columns
   end
   
   def self.down
     remove_column :things, :sku
-    Thing::Deleted.update_columns
   end
 end
